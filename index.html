@@ -162,7 +162,11 @@
       hello();
     });
 
-    
+    try {
+      errorBtns[15].innerHTML = "button doesn't exist";
+    } catch (err) {
+      throw new ReferenceError("Cannot set innerHTML of element that does not exist")
+    }
 
   </script>
 </body>
